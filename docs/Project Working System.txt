@@ -1,0 +1,23 @@
+				>>Project Working System
+
+1.To run my working system first thing is to upload the downloaded dataset which is not cleaned
+
+2.After uploading file using the path or dbfs in databricks 
+
+3.Here there will be consisting of the different types of data information and the data description to know the null values and the mean, median, mode, quartile range etc.
+
+4.Above in the 3rd sentence it will be consisting of overall data structure from the above information as reference we have cleaned the data in various techniques
+
+5.In the data cleaning stage it will be consisting of total data cleaned.
+
+6.After data cleaning there file will be file named EDA it will be consisting of whole graphs related to the project which will be executed in sql in databricks
+
+7.After EDA to give data to the model all categorical variables converted to numerical.
+
+8.After Normalisation there will be file named project in the zip folder and first need to import the cleaned dataset data_457 into it and build the model the code is present in the project file.
+
+9.finally there is evaluation metrics and cross validation code in the project file thereafter after doing cross validation we need execute the evaluation metrics.
+
+10.This is total details of the project working system by following each step the working system execute properly with out any errors
+
+Dataset link :https://infobridge.fhwa.dot.gov/

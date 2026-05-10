@@ -1,20 +1,27 @@
-# US Bridge Condition Analysis and Prediction
+# US Bridge Condition Predictive Analysis using Databricks
 
 ## Project Overview
-This project focuses on analyzing and predicting the condition of US bridges using data from the Federal Highway Administration (FHWA) InfoBridge. The analysis and machine learning models are built using PySpark on Databricks.
+This project presents an end-to-end big data pipeline and machine learning analysis aimed at predicting the condition of US bridges. Utilizing data from the Federal Highway Administration (FHWA) InfoBridge, the solution is built entirely on **Databricks**, leveraging **PySpark** for distributed data processing and machine learning.
+
+The goal is to provide actionable insights for infrastructure maintenance by predicting bridge deterioration based on factors such as daily traffic, age, structure length, and deck area.
+
+## Technologies Used
+- **Databricks**: Primary environment for data ingestion, processing, and model training.
+- **PySpark**: Distributed data processing and machine learning (Spark MLlib).
+- **Python**: Data manipulation and scripting.
+- **SQL**: Exploratory Data Analysis (EDA).
 
 ## Repository Structure
-- `data/`: Contains the datasets used for the project (ignored in git if too large).
-- `notebooks/`: Jupyter notebooks containing the data cleaning, exploratory data analysis (EDA), and machine learning models.
-- `html_reports/`: Exported HTML versions of the notebooks and EDA graphs.
-- `docs/`: Project presentations and documentation.
+- `data/`: Directory for raw datasets (`.csv` files ignored in version control for space efficiency).
+- `notebooks/`: 
+  - `01_Data_Cleaning.ipynb`: PySpark notebook for cleaning and preprocessing the raw bridge data.
+  - `02_Modeling_and_Evaluation.ipynb`: PySpark MLlib notebook containing the Random Forest and Gradient-Boosted Trees regressor models.
+- `html_reports/`: Exported HTML reports of the Databricks notebooks and EDA visual graphs.
+- `docs/`: Project presentation and methodology documentation.
 
-## How to Run
-1. Download the dataset from the [FHWA InfoBridge website](https://infobridge.fhwa.dot.gov/).
-2. Upload the dataset to Databricks (DBFS).
-3. Run the `Data cleaning 614.ipynb` notebook to clean the raw data.
-4. (Optional) View the EDA in SQL within Databricks to understand the data distribution.
-5. Run the `Project.ipynb` notebook which contains the PySpark Machine Learning models (Random Forest, Gradient-Boosted Trees) to predict bridge conditions based on features like Average Daily Traffic, Age, Structure Length, and Deck Area.
-
-## Team
-- AIT614-001 Team 5
+## How to Run in Databricks
+1. Download the raw bridge condition dataset from the [FHWA InfoBridge portal](https://infobridge.fhwa.dot.gov/).
+2. Upload the `.csv` dataset to the Databricks File System (DBFS).
+3. Import the notebooks from the `notebooks/` directory into your Databricks workspace.
+4. Run `01_Data_Cleaning.ipynb` to process the raw data.
+5. Run `02_Modeling_and_Evaluation.ipynb` to execute the PySpark ML pipeline and evaluate the predictive models.

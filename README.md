@@ -1,4 +1,4 @@
-# US Bridge Condition Predictive Analysis using Databricks
+# US Bridge Condition Predictive Analysis 
 
 ## Project Overview
 This project presents an end-to-end big data pipeline and machine learning analysis aimed at predicting the condition of US bridges. Utilizing data from the Federal Highway Administration (FHWA) InfoBridge, the solution is built entirely on **Databricks**, leveraging **PySpark** for distributed data processing and machine learning.

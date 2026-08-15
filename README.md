@@ -1,6 +1,6 @@
 ﻿# US Bridge Condition Predictive Analysis
 
-**Which of America's bridges are deteriorating — and what drives it?** This project builds an end-to-end big-data pipeline on Databricks to predict the condition of U.S. bridges from federal inventory data, turning millions of inspection records into actionable signals for infrastructure maintenance.
+**Which of America''s bridges are deteriorating — and what drives it?** This project builds an end-to-end big-data pipeline on Databricks to predict the condition of U.S. bridges from federal inventory data, turning millions of inspection records into actionable signals for infrastructure maintenance.
 
 The entire workflow — ingestion, cleaning, EDA, and machine learning — runs on PySpark, so it scales to the full national dataset rather than a sampled subset.
 
@@ -10,7 +10,7 @@ The entire workflow — ingestion, cleaning, EDA, and machine learning — runs 
 
 The U.S. has hundreds of thousands of bridges, many decades past their design life. Inspecting and maintaining them is expensive, and resources are limited — so knowing which bridges are most likely to be in poor condition, and what factors drive deterioration, has real budgetary and public-safety value.
 
-This project frames bridge condition as a predictive problem: given a bridge's characteristics — daily traffic load, age, structure length, deck area, and more — can we predict its condition and identify the strongest drivers of deterioration?
+This project frames bridge condition as a predictive problem: given a bridge''s characteristics — daily traffic load, age, structure length, deck area, and more — can we predict its condition and identify the strongest drivers of deterioration?
 
 ---
 
@@ -39,6 +39,19 @@ Key predictive features include:
 ---
 
 ## Pipeline
+
+```mermaid
+flowchart TD
+    A[FHWA InfoBridge<br/>raw CSV] --> B[Data Cleaning<br/>PySpark]
+    B --> C[Exploratory Data Analysis<br/>SQL + visuals]
+    C --> D[Modeling & Evaluation<br/>Spark MLlib]
+    D --> E[Random Forest]
+    D --> F[Gradient-Boosted Trees]
+    E --> G[Best model selected]
+    F --> G
+    G --> H[Predicted bridge condition<br/>+ feature importance]
+```
+
 ---
 
 ## Tech stack
